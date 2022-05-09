@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Route::resource('admin/categories', 'Admin\CategoryController');
+Route::post('admin/categories', 'Admin\CategoryController@search')->name('categories.search');
+
 Route::get('/', function () {
     return view('welcome');
 });
